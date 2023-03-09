@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:avpartners/Resources/Private/Language/locallang_csh_tx_avpartners_domain_model_partners.xlf" date="2023-03-02T19:10:31Z" product-name="avpartners">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="logo.description" resname="logo.description">
+				<source>logo</source>
+			</trans-unit>
+			<trans-unit id="address.description" resname="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="zip.description" resname="zip.description">
+				<source>zip</source>
+			</trans-unit>
+			<trans-unit id="city.description" resname="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="phone.description" resname="phone.description">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="fax.description" resname="fax.description">
+				<source>fax</source>
+			</trans-unit>
+			<trans-unit id="url.description" resname="url.description">
+				<source>url</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="comment.description" resname="comment.description">
+				<source>comment</source>
+			</trans-unit>
+			<trans-unit id="categories.description" resname="categories.description">
+				<source>categories</source>
+			</trans-unit>
+			<trans-unit id="country.description" resname="country.description">
+				<source>country</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

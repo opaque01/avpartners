@@ -1,0 +1,22 @@
+plugin.tx_avpartners {
+    view {
+        # cat=plugin.tx_avpartners/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:avpartners/Resources/Private/Templates/
+        # cat=plugin.tx_avpartners/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:avpartners/Resources/Private/Partials/
+        # cat=plugin.tx_avpartners/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:avpartners/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_avpartners//a; type=string; label=Default storage PID
+        storagePid =
+    }
+    settings {
+        # cat=plugin.tx_avpartners/file; type=string; label=Path to CSS file
+	      cssFile = EXT:avpartners/Resources/Public/Css/avpartners.css
+        # cat=plugin.tx_avpartners/file; type=string; label=Path to JS file
+	      jsFile = EXT:avpartners/Resources/Public/JavaScript/events.js
+        # cat = plugin.tx_ajaxselectlist//3; type=int+; label=typeNum for AJAX call 
+        typeNum = 427590
+    }
+}

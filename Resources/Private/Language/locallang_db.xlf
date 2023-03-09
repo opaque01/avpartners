@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:avpartners/Resources/Private/Language/locallang_db.xlf" date="2023-03-02T19:10:31Z" product-name="avpartners">
+		<header/>
+		<body>
+			<trans-unit id="tx_avpartners_domain_model_partners" resname="tx_avpartners_domain_model_partners">
+				<source>Partners</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.name" resname="tx_avpartners_domain_model_partners.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.logo" resname="tx_avpartners_domain_model_partners.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.address" resname="tx_avpartners_domain_model_partners.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.zip" resname="tx_avpartners_domain_model_partners.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.city" resname="tx_avpartners_domain_model_partners.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.phone" resname="tx_avpartners_domain_model_partners.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.fax" resname="tx_avpartners_domain_model_partners.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.url" resname="tx_avpartners_domain_model_partners.url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.email" resname="tx_avpartners_domain_model_partners.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.comment" resname="tx_avpartners_domain_model_partners.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.categories" resname="tx_avpartners_domain_model_partners.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_partners.country" resname="tx_avpartners_domain_model_partners.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_countries" resname="tx_avpartners_domain_model_countries">
+				<source>Countries</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_countries.name" resname="tx_avpartners_domain_model_countries.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_countries.isocode" resname="tx_avpartners_domain_model_countries.isocode">
+				<source>Isocode</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_categories" resname="tx_avpartners_domain_model_categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_avpartners_domain_model_categories.name" resname="tx_avpartners_domain_model_categories.name">
+				<source>Name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

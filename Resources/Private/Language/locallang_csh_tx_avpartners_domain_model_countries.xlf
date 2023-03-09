@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:avpartners/Resources/Private/Language/locallang_csh_tx_avpartners_domain_model_countries.xlf" date="2023-03-02T19:10:31Z" product-name="avpartners">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="isocode.description" resname="isocode.description">
+				<source>isocode</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

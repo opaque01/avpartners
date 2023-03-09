@@ -1,0 +1,42 @@
+plugin.tx_avpartners {
+    view {
+        templateRootPaths.0 = EXT:avpartners/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_avpartners.view.templateRootPath}
+        partialRootPaths.0 = EXT:avpartners/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_avpartners.view.partialRootPath}
+        layoutRootPaths.0 = EXT:avpartners/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_avpartners.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_avpartners.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        callDefaultActionIfActionCantBeResolved = 1
+    }
+    settings {
+        cssFile = {$plugin.tx_avpartners.settings.cssFile}
+        jsFile = {$plugin.tx_avpartners.settings.jsFile}
+        typeNum = {$plugin.tx_avpartners.settings.typeNum}
+    }
+}
+
+// PAGE object for Ajax call:
+avpartners = PAGE
+avpartners {
+    typeNum < plugin.tx_avpartners.settings.typeNum
+    10 < tt_content.list.20.avpartners_partners
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type:application/html
+        xhtml_cleaning = 0
+        debug = 0
+        no_cache = 1
+        admPanel = 0
+    }
+}

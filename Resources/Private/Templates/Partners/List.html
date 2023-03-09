@@ -1,0 +1,69 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Categories:
+Index.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+<div data-highlightcolor="{settings.highlightColor}" data-isocodes="{f:if(condition: i.isLast, then: '{country.isocode}', else: '{country.isocode}, ') -> f:for(each:'{countriesWithPartners}', as: 'country', iteration: 'i')}" id="svg">
+  <f:format.raw>{svg}</f:format.raw>
+</div>
+
+  <!--<div class="select">
+    <f:link.action class="btn btn-primary" action="list" controller="Partners">Alle anzeigen</f:link.action>
+    <f:for each="{countriesWithPartners}" as="country">
+      <f:link.action class="btn btn-primary" action="list" controller="Partners" arguments="{countries: country}">{country.name}</f:link.action>
+    </f:for>
+  </div>
+-->
+
+<div class="select">
+  <a class="btn btn-secondary load-more-items" data-page="{country}" data-url="{f:uri.action(action: 'list', controller: 'Partners', pageType:'{settings.avpartners}')}">
+   <f:translate key="tx_avpartners_domain_model_partners.showall" />
+</a>
+<f:for each="{countriesWithPartners}" as="country">
+  <a class="btn btn-secondary load-more-items" data-page="{country}" data-url="{f:uri.action(action: 'list', controller: 'Partners', arguments: '{countries: country}', pageType:'{settings.avpartners}')}">
+   {country.name}
+</a>
+</f:for>
+</div>
+
+  <table id="avpartners">
+    <tr>
+      <th>
+        <f:translate key="tx_avpartners_domain_model_partners.name" />
+      </th>
+      <th>
+        <f:translate key="tx_avpartners_domain_model_partners.categories" />
+      </th>
+      <th>
+        <f:translate key="tx_avpartners_domain_model_partners.country" />
+      </th>
+    </tr>
+    <f:for each="{partners}" as="partner">
+      <tr>
+        <td>{partner.name}</td>
+        <td>
+          <f:for each="{partner.categories}" as="category">
+            {category.name}
+          </f:for>
+        </td>
+        <td>{partner.country.name} ({partner.country.isocode})</td>
+      </tr>
+    </f:for>
+  </table>
+
+
+
+</f:section>
+
+</html>

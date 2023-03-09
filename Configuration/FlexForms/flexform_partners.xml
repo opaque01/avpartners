@@ -1,0 +1,35 @@
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>Settings</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <settings.highlightColor>
+            <TCEforms>
+              <label>Highlight color for countries with partners</label>
+              <config>
+                <type>input</type>
+                <renderType>colorpicker</renderType>
+                <size>10</size>
+              </config>
+            </TCEforms>
+          </settings.highlightColor>
+          <settings.svg>
+            <TCEforms>
+              <label>SVG content</label>
+              <config>
+                <type>text</type>
+                <size>50</size>
+                <eval></eval>
+                <enableRichtext>0</enableRichtext>
+              </config>
+            </TCEforms>
+          </settings.svg>
+          </el>
+        </ROOT>
+      </sDEF>
+    </sheets>
+  </T3DataStructure>
