@@ -154,7 +154,7 @@ return [
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
-            
+
         ],
         'address' => [
             'exclude' => false,
@@ -242,6 +242,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_avpartners_domain_model_categories',
+                'foreign_table_where' => 'AND {#tx_avpartners_domain_model_categories}.{#pid}=###CURRENT_PID### AND {#tx_avpartners_domain_model_categories}.{#sys_language_uid} IN (-1,0)',
                 'default' => 0,
                 'size' => 10,
                 'autoSizeMax' => 30,
@@ -268,12 +269,13 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_avpartners_domain_model_countries',
+                'foreign_table_where' => 'AND {#tx_avpartners_domain_model_countries}.{#pid}=###CURRENT_PID### AND {#tx_avpartners_domain_model_countries}.{#sys_language_uid} IN (-1,0)',
                 'default' => 0,
                 'minitems' => 0,
                 'maxitems' => 1,
             ],
 
         ],
-    
+
     ],
 ];

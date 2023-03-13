@@ -14,14 +14,40 @@ $(document).ready(function() {
   function changePath(id, color) {
     id = id.replace(/\s/g, '');
     let path = document.getElementById(id);
-    console.log(path);
     path.setAttribute("fill", color);
+    path.classList.add("cursor");
+
+    path.addEventListener("click", function() {
+      let button = $('.select a').each(function() {
+        if ($(this).data('iso') === id) {
+          var ajaxUrl = $(this).data('url');
+          callAjax(ajaxUrl)
+        }
+      });
+    });
+
+  }
+
+  function callAjax(ajaxUrl) {
+
+    var container = 'avpartners';
+    $.ajax({
+      url: ajaxUrl,
+      type: 'GET',
+      success: function(result) {
+        var ajaxDom = $(result).find('#' + container);
+        $('#' + container).replaceWith(ajaxDom);
+        window.history.pushState("object or string", "Title", ajaxUrl);
+      }
+    });
   }
 
   $('.select').on('click', 'a', function(e) {
     var ajaxUrl = $(this).data('url');
     if (ajaxUrl !== undefined && ajaxUrl !== '') {
-
+      e.preventDefault();
+      callAjax(ajaxUrl);
+/*
       e.preventDefault();
       var container = 'avpartners';
       $.ajax({
@@ -33,8 +59,24 @@ $(document).ready(function() {
           window.history.pushState("object or string", "Title", ajaxUrl);
         }
       });
+
+      */
     }
+
+
   });
 
 
 });
+
+
+function handleZoom(e) {
+	d3.select('svg g')
+		.attr('transform', e.transform);
+}
+
+let zoom = d3.zoom()
+	.on('zoom', handleZoom);
+
+d3.select('svg')
+  .call(zoom);

@@ -40,3 +40,5 @@ avpartners {
         admPanel = 0
     }
 }
+
+page.includeJSFooter.threedjs = EXT:avpartners/Resources/Public/JavaScript/d3.min.js

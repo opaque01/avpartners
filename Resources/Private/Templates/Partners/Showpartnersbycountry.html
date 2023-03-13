@@ -14,22 +14,20 @@ Index.html: keep
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-<div data-highlightcolor="{settings.highlightColor}" data-isocodes="{f:if(condition: i.isLast, then: '{country.isocode}', else: '{country.isocode},') -> f:for(each:'{countriesWithPartners}', as: 'country', iteration: 'i')}" id="svg">
-  <f:format.raw>{svg}</f:format.raw>
-</div>
 
-<div class="select">
-  <a class="btn btn-secondary load-more-items" data-page="{country}" data-url="{f:uri.action(action: 'list', controller: 'Partners', pageType:'{settings.avpartners}')}">
-   <f:translate key="tx_avpartners_domain_model_partners.showall" />
-</a>
-<f:for each="{countriesWithPartners}" as="country">
-  <a class="btn btn-secondary load-more-items" data-iso={country.isocode} data-page="{country}" data-url="{f:uri.action(action: 'list', controller: 'Partners', arguments: '{countries: country}', pageType:'{settings.avpartners}')}">
-   {country.name}
-</a>
-</f:for>
-</div>
+  <f:format.raw>{settings.svg}</f:format.raw>
 
-  <table id="avpartners">
+  <div class="select">
+    <f:link.action action="list" controller="Partners">Alle anzeigen</f:link.action>
+    <f:for each="{countriesWithPartners}" as="country">
+      <f:link.action action="showpartnersbycountry" controller="Partners" arguments="{countries: country.uid}">{country.name}</f:link.action>
+    </f:for>
+  </div>
+
+
+
+
+  <table class="tx_avpartners">
     <tr>
       <th>
         <f:translate key="tx_avpartners_domain_model_partners.name" />
@@ -53,9 +51,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
       </tr>
     </f:for>
   </table>
-
-
-
 </f:section>
 
 </html>
